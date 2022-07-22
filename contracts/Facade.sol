@@ -128,6 +128,8 @@ contract Facade is IFacade {
         }
     }
 
+    /// @return tokens The erc20 needed for the issuance
+    /// @return deposits The deposits necessary to issue `amount` RToken
     /// @custom:static-call
     function issue(IRToken rToken, uint256 amount)
         external

@@ -115,7 +115,10 @@ task('deploy', 'Deploy protocol smart contracts').setAction(async (params, hre) 
   })
   const rsrHolder = hre.ethers.provider.getSigner(holderAddr)
 
-  const RSR = await hre.ethers.getContractAt('ERC20', RSR_ADDRESS)
+  const RSR = await hre.ethers.getContractAt(
+    '@openzeppelin/contracts/token/ERC20/ERC20.sol:ERC20',
+    RSR_ADDRESS
+  )
   await RSR.connect(rsrHolder).transfer(deployer.address, ONE_ETH.mul(100000))
 
   console.log(`

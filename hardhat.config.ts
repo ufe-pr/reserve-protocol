@@ -39,6 +39,7 @@ const config: any = {
       allowUnlimitedContractSize: true,
     },
     localhost: {
+      url: 'http://192.168.3.58:8545',
       gas: 0x1ffffffff,
       blockGasLimit: 0x1fffffffffffff,
       allowUnlimitedContractSize: true,
